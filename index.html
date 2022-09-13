@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@JustOnetrip</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-dark"
+      style="background-color: #c16f90"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">@Travelenture</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">AboutUs</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Destinations
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Shimla</a></li>
+                <li><a class="dropdown-item" href="#">Manali</a></li>
+                <li><a class="dropdown-item" href="#">Pondicherry</a></li>
+                <li><a class="dropdown-item" href="#">Goa</a></li>
+                <li><a class="dropdown-item" href="#">Coorg</a></li>
+                <li><a class="dropdown-item" href="#">Ooty</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">24X7 Helpline</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Query for Us</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact Us</a>
+            </li>
+          </ul>
+          <div>
+            <button
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Login
+            </button>
+            <button
+              class="btn btn-success"
+              data-bs-toggle="modal"
+              data-bs-target="#signupModal"
+            >
+              SignUp
+            </button>
+          </div>
+          <form class="d-flex mx-2" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-warning" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Modal -->
+
+    <!--Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <div id="emailHelp" class="form-text">
+                  We'll never share your email with anyone else.
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary my-3">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Signup Modal -->
+    <div
+      class="modal fade"
+      id="signupModal"
+      tabindex="-1"
+      aria-labelledby="signupModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">SignUp</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3 needs-validation" novalidate>
+              <div class="col-md-6">
+                <label for="validationCustom01" class="form-label">First name</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="e.g Nisha" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <div class="col-md-6">
+                <label for="validationCustom02" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="e.g Prasad" required>
+                <div class="valid-feedback">
+                  Looks good!
+                </div>
+              </div>
+              <!-- email nd pswd  -->
+              <div class="col-md-12 my-3">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Enter email Id">
+              </div>
+              <div class="col-md-12 my-3">
+                <label for="inputEmail4" class="form-label">Password (8 or more characters)</label>
+                <input type="email" class="form-control" id="inputEmail4" placeholder="Enter password">
+              </div>
+              <!-- terms & conditions  -->
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                  <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                  </label>
+                  <div class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 my-4">
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Caraousel -->
+    <div
+      id="carouselExampleCaptions"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="https://picsum.photos/id/231/1200/300"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Welcome to Travelenture</h2>
+            <p>
+              Find best deals at Travelenture for ✓ Flight Tickets, Hotels,
+              Holiday Packages, Bus and Train / Railway Reservations for India &
+              International travel.
+            </p>
+            <button type="button" class="btn btn-primary">Flights</button>
+            <button type="button" class="btn btn-success">
+              Holiday Packages
+            </button>
+            <button type="button" class="btn btn-danger">Hotels</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <!-- 398,817,76 -->
+          <img
+            src="https://picsum.photos/id/398/1200/300"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>FLAT 9% OFF* on Select Business Hotel Stays.</h2>
+            <p>
+              Booking Validity: 31st Aug - 7th Sept & Stays Validity: 31st Aug
+              -30th Sept
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="https://picsum.photos/id/364/1200/300"
+            class="d-block w-100"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h2>FLAT 10% OFF* on domestic & International Flights.</h2>
+            <p>grab this offer on your travel bookings with SBI Credit Cards</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- bootstrap->examples->Blog ->  -->
+    <div class="container my-5">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary"
+                >DESTINATIONS</strong
+              >
+              <h5 class="mb-0">Explore the Best of Dubai</h5>
+              <div class="mb-1 text-muted">
+                Book Burj khalifa tours, safaris & more.
+              </div>
+              <p class="card-text mb-auto">
+                Dubai has implemented an ambitious tourism strategy to attract
+                25 million visitors a year by 2025, and it’s already almost
+                there.
+              </p>
+              <a href="/dest.html" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="https://picsum.photos/id/1067/200/250" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">HOLIDAYS</strong>
+              <h5 class="mb-0">30% OFF* on Holiday Packages</h5>
+              <div class="mb-1 text-muted">
+                For nearby, starting @JUST 4,666
+              </div>
+              <p class="mb-auto">
+                Only for Indian consumers travel preferences, Travelenture
+                offers a vast range of holiday packages.
+              </p>
+              <a href="/holiday.html" class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="holiday.webp" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second set of card  -->
+    <div class="container my-5">
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-info"
+                >DOM FLIGHTS</strong
+              >
+              <h5 class="mb-0">Grab FLAT 9% OFF* on Hotel Stays in India.</h5>
+              <div class="mb-1 text-muted">For your WOW weekend getaway</div>
+              <p class="mb-auto">
+                If you're looking for domestic flight deals, look no further
+                than Travelenture.
+              </p>
+              <a href="/domestic.html" class="stretched-link"
+                >Continue reading</a
+              >
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="stay.webp" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-danger"
+                >INTL FLIGHTS</strong
+              >
+              <h5 class="mb-0">New Direct Flights</h5>
+              <div class="mb-1 text-muted">
+                Between Delhi & Germany, with return fares starting @JUST Rs
+                17,749.
+              </div>
+              <p class="card-text mb-auto">
+                Book flights from Delhi to Germany quickly and securely at
+                Travelenture.
+              </p>
+              <a href="/inter.html" class="stretched-link">Continue reading</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="inter.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container">
+      <p class="float-end"><a href="#">Back to top</a></p>
+      <p>
+        © 2022–2023 Travelenture, Inc. · <a href="#">Privacy</a> ·
+        <a href="#">Terms</a>
+      </p>
+    </footer>
+    <!-- <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- You can also include Popper and ou
+      r JS separately. If you don’t plan to use dropdowns, popovers, or tooltips, save some kilobytes by not including Popper. -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
